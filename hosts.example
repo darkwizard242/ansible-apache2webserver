@@ -1,0 +1,9 @@
+[local]
+localhost
+
+[centos]
+appserver
+dbserver
+
+[ubuntu]
+ubuntubox

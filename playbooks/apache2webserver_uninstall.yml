@@ -1,0 +1,26 @@
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: myuser
+  tasks:
+  - name: Uninstallation of Apache2 Web Server on Redhat/CentOS systems.
+    yum:
+      name: httpd
+      state: absent
+- hosts: ubuntu
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: myuser
+  tasks:
+  - name: Uninstallation of Apache2 Web Server on Ubuntu/Debian systems.
+    yum:
+      name: apache2
+      state: absent
