@@ -4,8 +4,6 @@
   become_method: sudo
   connection: ssh
   gather_facts: yes
-  vars:
-    username: myuser
   tasks:
   - name: Uninstallation of Apache2 Web Server on Redhat/CentOS systems.
     yum:
@@ -17,8 +15,6 @@
   become_method: sudo
   connection: ssh
   gather_facts: yes
-  vars:
-    username: myuser
   tasks:
   - name: Uninstallation of Apache2 Web Server on Ubuntu/Debian systems.
     yum:
